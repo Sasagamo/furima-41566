@@ -5,7 +5,7 @@
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
 | email              | string | null: false, unique: true |
-| nickname           | string | null:false  |
+| nickname           | string | null: false |
 | encrypted_password | string | null: false |
 | surname            | string | null: false |
 | name               | string | null: false |
@@ -38,6 +38,7 @@
 - belongs_to :user
 - has_one :order
 - belongs_to_active_hash :category
+- belongs_to_active_hash :condition
 - belongs_to_active_hash :shipping_fee_payer
 - belongs_to_active_hash :shipping_days
 - belongs_to_active_hash :prefecture
