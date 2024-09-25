@@ -28,7 +28,7 @@
 | category_id           | integer    | null: false (ActiveHash) |
 | condition_id          | integer    | null: false (ActiveHash) |
 | shipping_fee_payer_id | integer    | null: false (ActiveHash) |
-| shipping_days_id      | integer    | null: false (ActiveHash) |
+| shipping_day_id       | integer    | null: false (ActiveHash) |
 | prefecture_id         | integer    | null: false (ActiveHash) |
 | user                  | references | null: false, foreign_key: true |
 
@@ -40,7 +40,7 @@
 - belongs_to_active_hash :category
 - belongs_to_active_hash :condition
 - belongs_to_active_hash :shipping_fee_payer
-- belongs_to_active_hash :shipping_days
+- belongs_to_active_hash :shipping_day
 - belongs_to_active_hash :prefecture
 
 ## orders テーブル
