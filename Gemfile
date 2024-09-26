@@ -78,8 +78,9 @@ group :development do
   gem 'rubocop', require: false
 end
 
-gem "pry-rails"
-gem "devise"
+gem 'pry-rails'
+gem 'devise'
+gem 'gimei'
 
 group :production do
   gem 'pg'
