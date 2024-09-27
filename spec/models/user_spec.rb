@@ -29,7 +29,7 @@ RSpec.describe User, type: :model do
         @user.save
         another_user = FactoryBot.build(:user, email: @user.email)
         another_user.valid?
-        expect(another_user.errors.full_messages).to include("Email has already been taken")
+        expect(another_user.errors.full_messages).to include('Email has already been taken')
       end
 
       it 'メールアドレスは@を含む必要があること' do
@@ -75,7 +75,8 @@ RSpec.describe User, type: :model do
         @user.first_name = 'abc'
         @user.last_name = 'def'
         @user.valid?
-        expect(@user.errors.full_messages).to include('First name is invalid. Input full-width characters', 'Last name is invalid. Input full-width characters')
+        expect(@user.errors.full_messages).to include('First name is invalid. Input full-width characters',
+                                                      'Last name is invalid. Input full-width characters')
       end
 
       it 'お名前カナ(全角)は名字と名前がそれぞれ必須であること' do
@@ -89,7 +90,8 @@ RSpec.describe User, type: :model do
         @user.first_name_kana = 'やまだ'
         @user.last_name_kana = 'たろう'
         @user.valid?
-        expect(@user.errors.full_messages).to include('First name kana is invalid. Input full-width katakana characters', 'Last name kana is invalid. Input full-width katakana characters')
+        expect(@user.errors.full_messages).to include('First name kana is invalid. Input full-width katakana characters',
+                                                      'Last name kana is invalid. Input full-width katakana characters')
       end
 
       it '生年月日が必須であること' do
