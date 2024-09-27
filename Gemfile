@@ -82,6 +82,9 @@ gem 'pry-rails'
 gem 'devise'
 gem 'gimei'
 
+
 group :production do
   gem 'pg'
 end
+
+gem 'active_hash'
