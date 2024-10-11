@@ -76,6 +76,11 @@ end
 
 group :development do
   gem 'rubocop', require: false
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 gem 'pry-rails'
